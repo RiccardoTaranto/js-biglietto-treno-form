@@ -41,3 +41,8 @@ formEl.addEventListener('submit', function (e) {
 
 
 })
+
+
+/* riprendere da MILESTONE 3:
+add style  HTML e CSS in modo da renderla esteticamente gradevole.
+*/
