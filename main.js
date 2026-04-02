@@ -16,8 +16,9 @@ console.log(kmEl, ageEl, generateBtnEl);
 const rateKm = 0.21
 
 const formEl = document.querySelector('form')
+const finalRateEl = document.getElementById('finalRate')
 
-// La risposta finale (o output) da scrivere in console. 
+// La risposta finale (o output) da scrivere in console
 formEl.addEventListener('submit', function (e) {
     e.preventDefault()
     const km = Number(kmEl.value)
@@ -35,5 +36,8 @@ formEl.addEventListener('submit', function (e) {
     }
 
     console.log(`Prezzo finale: ${ticketRate.toFixed(2)} €`);
+    // output del prezzo finale
+    finalRateEl.innerHTML = `${ticketRate.toFixed(2)} €`
+
 
 })
