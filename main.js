@@ -1,6 +1,6 @@
 console.log('js biglietto treno');
 
-// MILESTONE 1 - Scrivere un programma che chieda all’utente:
+// Scrivere un programma che chieda all’utente:
 
 // Il numero di chilometri da percorrere (input)
 const kmEl = document.getElementById('km')
@@ -15,8 +15,11 @@ console.log(kmEl, ageEl, generateBtnEl);
 // il prezzo del biglietto è definito in base ai km (0.21 € al km)
 const rateKm = 0.21
 
+const formEl = document.querySelector('form')
+
 // La risposta finale (o output) da scrivere in console. 
-generateBtnEl.addEventListener('click', function () {
+formEl.addEventListener('submit', function (e) {
+    e.preventDefault()
     const km = Number(kmEl.value)
     const age = Number(ageEl.value)
     // console.log(km, age);
@@ -31,6 +34,6 @@ generateBtnEl.addEventListener('click', function () {
         ticketRate *= 0.6
     }
 
-    console.log(ticketRate.toFixed(2));
+    console.log(`Prezzo finale: ${ticketRate.toFixed(2)} €`);
 
 })
